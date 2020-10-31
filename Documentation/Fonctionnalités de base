@@ -1,1 +1,22 @@
+1.	Le capteur Ultrason HC-SR04 détecte la présence d’une personne en face de l’écran LCD donc ce dernier va afficher les paramètres récupérés tels que 
+(la température, la pression, l’humidité et la luminosité).
+
+2.	Le capteur de luminosité TLS2561 va émettre la valeur actuelle de la luminosité.                
+  - Si la valeur dépasse une valeur RfMax, l’écran LCD va afficher un message « éteindre les lampes » et les leds vont être éteintes par suite.       
+  - Si elle est inférieure à une valeur RfMin, il va afficher le message « Milieu un peu obscure » ensuite les leds vont être allumés.
+
+3.	Le capteur d’humidité DHT22 va mesurer la valeur de l’humidité dans l’environnement où notre système est installé et puis les afficher sur l’écran LCD.
+
+4.	Le capteur BMP180 récupère la valeur de la pression de l’atmosphère ensuite on va afficher la valeur récupérée sur l’écran.
+
+5.	Le capteur de température DH1621 va mesurer la température 
+
+6. Les deux cartes Arduino, la première carte contient les capteurs qui vont mesurer les paramètres souhaités et elle va jouer le rôle de maître. 
+   La deuxième carte contient la mémoire (carte SD) et le I/O Expander et elle va jouer le rôle d’esclave où elle va actionner selon les ordres de maître.
+
+7.	 L’écran LCD va afficher les données récupérées par les capteurs tels que : température, humidité, pression.
+
+8.	 Le microSD adapter va stocker les données de références.
+
+9.	 MCP23S17 I/O Expander contient les sorties de commande qui sont les leds à allumer ou à éteindre.
 
